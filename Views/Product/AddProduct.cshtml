@@ -1,0 +1,19 @@
+﻿@model WebProjectOOP.Entities.Product;
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_CoreLayout.cshtml";
+}
+
+<h1>Ürün Ekleme Sayfası</h1>
+<form method="post">
+    @Html.Label("Ürün Adı \t: ")
+    @Html.TextBoxFor(x=>x.ProductName,new{@class="form-control"})
+    <br />
+    @Html.Label("Birim Fiyatı : ")
+    @Html.TextBoxFor(x=>x.Price,new {@class="form-control"})
+    <br />
+    @Html.Label("Stok Miktarı : ")
+    @Html.TextBoxFor(x=>x.Stock,new {@class="form-control"})
+    <br />
+    <button class="btn btn-outline-info">Ürünü Ekle</button>
+</form>
